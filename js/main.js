@@ -106,7 +106,7 @@ startButton.onclick=function(){
   }
 
 function aw(){
-  stepss.textContent=nom_T;
+
   
   ferme_dors()
     setTimeout(() => {
@@ -126,4 +126,3 @@ function aw(){
 
     },3000);  
 }
-//! affiche steps 
