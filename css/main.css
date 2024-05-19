@@ -133,6 +133,7 @@ body {
 }
 button.btn-floor {
   border-radius:50%;
+  font-family: 'Font1';
   width:50px;
   height:50px;
   border:2px solid rgb(0, 0, 0);
@@ -140,8 +141,8 @@ button.btn-floor {
   cursor:pointer;
   left:5%;
   bottom: 300px;
-  font-size:23px;
-  color:#3c3c3c;
+  font-size:30px;
+  color:#02020A;
   outline:none;
 
   
@@ -184,13 +185,13 @@ button.btn-floor {
   border-radius: 3px;
   padding: 12px 35px;
   border: 0;
-  color: #3a4149;
+  color: #02020A;
   background: #3348ff;
   line-height: 1.15;
   font-size: 16px;
   :hover {
       transition: all .1s ease;
-      box-shadow: 0 0 0 0 #fff, 0 0 0 3px #06ff40;
+      box-shadow: 0 0 0 0 #fff, 0 0 0 3px #02020A;
   }
 
 }
@@ -203,8 +204,8 @@ button.btn-floor {
   border-radius: 3px;
   padding: 12px 24px;
   border: 0;
-  color: #3a4149;
-  background: #ff002b;
+  color: #02020A;
+  background: #FB3640;
   line-height: 1.15;
   font-size: 16px;
   :hover {
@@ -222,7 +223,7 @@ button.btn-floor {
     border-radius: 3px;
     padding: 12px 36px;
     border: 0;
-    color: #3a4149;
+    color: #02020A;
     background: #3348FF;
     line-height: 1.15;
     font-size: 16px;
