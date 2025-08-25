@@ -128,5 +128,4 @@ function updateSteps(offset) {
     const floorNumber = Math.round(-offset / 110); // Convert offset to floor number
     stepss.textContent = floorNumber;
 }
-//animation
 
