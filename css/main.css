@@ -260,7 +260,6 @@ button.btn-floor {
 	background-color: #0B2645;
 	border: 1px solid #ccc;
 	border-radius: 5px;
-	box-shadow: 2px 2px 5px #ccc;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
