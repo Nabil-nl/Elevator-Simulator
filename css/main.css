@@ -279,9 +279,9 @@ button.btn-floor {
 
 
 .container {
-  background-color: #0B2645;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background: linear-gradient(145deg, #0b2645, #1a3a5c);
+  border: 2px solid #2a4a6c;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
