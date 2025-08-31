@@ -23,14 +23,15 @@ body {
   position: absolute;
   width: 350px;
   border-radius: 15px;
-  left: 0px;
+  left: 2px;
   top: 250px;
   bottom: 15px;
   padding: 15px;
   gap: 10px;
   align-items: center;
-
-
+  height: 300px;
+  background: linear-gradient(135deg, #0b2645 0%, #1e3a5f 100%);
+  border: 2px solid #2a4a6c;
 
 }
 
@@ -330,4 +331,3 @@ button.btn-floor {
   height: 100%;
   z-index: -1;
 }
-
