@@ -9,3 +9,5 @@ This project simulates how a real elevator works  moving between floors, opening
 2. Each call appears on the digital display.  
 3. Press **Start** to begin — the elevator closes its doors, moves to each floor in order, and opens the doors again.  
 4. Press **Restart** — the elevator closes its doors, returns gracefully to the ground floor (`R0`), and reopens.
+
+ **Enjoy!**
