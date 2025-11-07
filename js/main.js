@@ -45,9 +45,14 @@ reset.onclick = function () {
   f.length = 0;
   i = 0;
   updateSteps(i);
+
+  liftContainer.getAnimations().forEach(anim => anim.cancel());
+  liftContainer.style.transform = `translateY(0%)`;
+
   startButton.disabled = false;
   openLiftDoors(); 
 };
+
 
 // =============== Doors =============== //
 function openLiftDoors() {
@@ -68,21 +73,32 @@ function ferme_dors() {
 function moveLift() {
   if (!f.length) return;
 
-  const animation = [
-    { transform: `translateY(${i}%)` },
-    { transform: `translateY(${f[0]}%)` }
-  ];
+  liftContainer.getAnimations().forEach(anim => anim.cancel());
 
-  const options = {
-    duration: 2000,
-    easing: "ease-in-out",
-    fill: "forwards"
+  const from = i;
+  const to = f[0];
+
+  liftContainer.style.transform = `translateY(${from}%)`;
+
+  const anim = liftContainer.animate(
+    [
+      { transform: `translateY(${from}%)` },
+      { transform: `translateY(${to}%)` }
+    ],
+    {
+      duration: 2000,
+      easing: "ease-in-out",
+      fill: "forwards"
+    }
+  );
+
+  anim.onfinish = () => {
+    liftContainer.style.transform = `translateY(${to}%)`;
+    i = to;
+    updateSteps(i);
   };
-
-  liftContainer.animate(animation, options);
-  i = f[0]; // update current position
-  updateSteps(i);
 }
+
 
 // helper: wait
 function wait(ms) {
