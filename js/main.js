@@ -40,18 +40,40 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // effacer
-reset.onclick = function () {
+reset.onclick = async function () {
   nom_T.textContent = "";
   f.length = 0;
+  startButton.disabled = false;
+
+  // نغلق الأبواب قبل الحركة
+  ferme_dors();
+  await wait(2000);
+
+  if (i !== 0) {
+    liftContainer.getAnimations().forEach(anim => anim.cancel());
+
+    const anim = liftContainer.animate(
+      [
+        { transform: `translateY(${i}%)` },
+        { transform: `translateY(0%)` }
+      ],
+      {
+        duration: 2000,
+        easing: "ease-in-out",
+        fill: "forwards"
+      }
+    );
+
+    await anim.finished;
+  }
+
+  liftContainer.style.transform = `translateY(0%)`;
   i = 0;
   updateSteps(i);
 
-  liftContainer.getAnimations().forEach(anim => anim.cancel());
-  liftContainer.style.transform = `translateY(0%)`;
-
-  startButton.disabled = false;
   openLiftDoors(); 
 };
+
 
 
 // =============== Doors =============== //
